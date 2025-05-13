@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>concurrency test1212</>;
+  return <>status check test</>;
 }
