@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>status check test</>;
+  return <>lint check test</>;
 }
