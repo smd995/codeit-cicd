@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>concurrency test1121312</>;
+  return <>풀 리퀘스트 테스트</>;
 }
