@@ -1,4 +1,4 @@
-name: Github Actions 연습하기
+name: Github Actions 실행시켜보기
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Github Repository 파일 불러오기
         uses: actions/checkout@v4
-      
+
       - name: Node 설치
         uses: actions/setup-node@v4
         with:
@@ -26,5 +26,3 @@ jobs:
 
       - name: 빌드하기
         run: npm run build
-        
-
