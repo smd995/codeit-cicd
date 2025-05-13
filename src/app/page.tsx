@@ -1,3 +1,3 @@
 export default function Home() {
-  return <>lint check test</>;
+  return <>환경: {process.env.NEXT_PUBLIC_MY_ENVIRONMENT}</>;
 }
