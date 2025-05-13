@@ -8,6 +8,15 @@ on:
     branches:
       - "**"
 
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   my-job:
     runs-on: ubuntu-latest
@@ -29,3 +38,12 @@ jobs:
 
       - name: 빌드하기
         run: npm run build
+
+  deploy: 
+    needs: my-job
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 배포하기
+        run: echo "배포 시작"
